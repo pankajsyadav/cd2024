@@ -1,23 +1,23 @@
 # Purpose of the program: To calculate cost of fibre installation based on length of fiber required using function
-# DSC510 - 4.1
-# Week 4
-# Programming Assignment Week 4
+# DSC510 - 5.1
+# Week 5
+# Programming Assignment Week 5
 # Author Pankaj Yadav
-# 06/29/2024
+# 07/06/2024
 
 
 # Change Control Log:
 
 # Change #:1
-# Changes Made : Created functions to
-#                1. Check if a variable is not empty
-#                2. Check if numeric variable is not zero or other type than float/ numeric
-#                3. Calculations and costing sheet creation
+# Changes Made : 1. Created functions for operations and averages
+#                2. Ask user to enter choices
+#                3. Perform desired operation as requested by user
 #                4. Call to main function
-# Date of changes : 6/29/2024
+#                5. Let user exit loop
+# Date of changes : 07/06/2024
 # Author : Pankaj Yadav
 # Change Approved by : Pankaj Yadav
-# Date Moved to Production : 6/30/2024
+# Date Moved to Production : 07/06/2024
 
 # Define the function to perform calculations
 def performCalculation(operation):
