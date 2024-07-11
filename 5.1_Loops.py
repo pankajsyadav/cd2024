@@ -19,8 +19,19 @@
 # Change Approved by : Pankaj Yadav
 # Date Moved to Production : 07/06/2024
 
+# Change #:2
+# Changes Made : Updated logic to make sure if user entered the code to perform operation
+# Date of changes : 07/07/2024
+# Author : Pankaj Yadav
+# Change Approved by : Pankaj Yadav
+# Date Moved to Production : 07/07/2024
+
 # Define the function to perform calculations
 def performCalculation(operation):
+    # Check if variable is empty
+    if len(operation) == 0:
+        print("None of the options were selected.")
+
     # Ask user to provide the numbers for operations
     num_input_1 = float(input('Enter the first number to perform the operation: '))
     num_input_2 = float(input('Enter the second number to perform the operation: '))
@@ -78,7 +89,7 @@ def calculateAverage():
 
     # initiate the for loop to ask user to provide the number and iterate the loop using inter_var
     for num in range(iter_var):
-        total += int(input(f'Enter the number {num+1}: '))
+        total += int(input(f'Enter the number {num + 1}: '))
 
     # The Print the total sum
     print(f'Sum Total: {total}')
@@ -98,6 +109,9 @@ if __name__ == "__main__":
             op_value = input("Please provide the operation you want to perform: "
                              "A for Addition, S for Subtraction, M for Multiplication, X for Division, "
                              "Y for Remainder : ")
+            if len(op_value) == 0:
+                print("You have not selected any operation to perform")
+                continue
             print(f"The answer is {performCalculation(op_value)}")
 
         elif in_val == 'a' or in_val == 'A':
