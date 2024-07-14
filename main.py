@@ -4,13 +4,29 @@
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+def get_inputs():
+    temp = None
+    temp_list = []
+    # while temp != 'END':
+    while True:
+        temp = input("Please enter the temperature or 'END' to quit: ")
+        if temp.isdigit():
+            temp_list.append(int(temp))
+        elif temp.upper() == 'END':
+            out_var = ''' 
+                     The Highest temperature is : {}
+                     The Lowest temperature is : {}
+                     The total observations provided : {}
+                   '''.format(max(temp_list), min(temp_list), len(temp_list))
+            return out_var
+
+
+def main():
+    print(get_inputs())
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    main()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
