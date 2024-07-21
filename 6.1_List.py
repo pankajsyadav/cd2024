@@ -1,11 +1,11 @@
 # Purpose of the program: The program ask user to input a list of temperatures and based upon user input
 #                         determine the number of temperatures in the program, determine the largest temperature,
 #                         and the smallest temperature.
-# DSC510 - 5.1
-# Week 5
-# Programming Assignment Week 5
+# DSC510 - 6.1
+# Week 6
+# Programming Assignment Week 6
 # Author Pankaj Yadav
-# 07/06/2024
+# 07/13/2024
 
 
 # Change Control Log:
