@@ -1,85 +1,146 @@
-# DSC 510
-# Week 3
-# Programming Assignment Week 2
-# Purpose: Estimate cost of installing fiber optic cables
-# Author: Jesse Caldo
-# 6/23/2020
-
-# Customer class to hold all values
-class Customer:
-    user = None
-    company_name = None
-    length = None
-
-    # class initializer to initialize values
-    def __init__(self, init_user, init_length, init_company_name):
-        self.user = init_user
-        self.length = init_length
-        self.company_name = init_company_name
-        self.validate()
-
-    # validate if all fields are valid
-    def validate(self):
-        if self.user == "" or self.user is None:
-            self.user = input("Missing user, Please enter username: ")
-            while len(self.user) == 0:
-                self.user = input("Missing user, Please enter username: ")
-
-        if self.company_name == "" or self.company_name is None:
-            self.company_name = input("Missing company name, Please enter "
-                                      "company name: ")
-            while len(self.company_name) == 0:
-                self.company_name = input("Missing company name, Please enter "
-                                          "company name: ")
-
-        if self.length == 0:
-            self.length = input("Length cannot be 0, Please enter length > "
-                                "0: ")
-            while self.length == 0:
-                self.length = input(
-                    "Length cannot be 0, Please enter length > "
-                    "0: ")
-
-
-# Parse input string to float
-def parse(string):
-    try:
-        return float(string)
-    except ValueError:
-        return parse(input("Please enter number of feet to be installed: "))
-
-
-# Generate receipt using company name and length that will be installed
-# Change#:1
-# Change(s) Made: Added discount based on length of installation
-# Date of Change: 6/17/2024
-# Author: Jesse Caldo
-# Change Approved by: Jesse Caldo
-# Date Moved to Production: 6/17/2024
-def generate_receipt(customer_info):
-    installation_cost = .87
-    if customer_info.length > 500:
-        installation_cost = .50
-    elif customer_info.length > 250:
-        installation_cost = .70
-    elif customer_info.length > 100:
-        installation_cost = .80
-    total_cost = customer_info.length * installation_cost
-    tax = total_cost * .10
-    print(f"""+-----------------------------------+
-+ Company Name : {customer_info.company_name:>16}   +
-+ Length (ft): {customer_info.length:>18}   +
-+ Installation Cost:      $.87/ft   +
-+ Sub Total : {total_cost:>19}   +
-+ Tax : {tax.__round__(2):>25}   +
-+ Total : {(total_cost + tax).__round__(2):>23}   +
-+-----------------------------------+""")
-
-
-# Main function for program
-if __name__ == "__main__":
-    user = input("Hello, please enter username: ")
-    company_name = input("Enter company name: ")
-    length = parse(input("Enter Number of feet to be installed: "))
-    customer = Customer(user, length, company_name)
-    generate_receipt(customer)
+Total Words in Dictionary :143
+ WORDS           COUNT 
+ ------------------------- 
+    That                 13
+    The                  11
+    We                   10
+    To                    8
+    Here                  8
+    A                     7
+    And                   6
+    Nation                5
+    Can                   5
+    Of                    5
+    Have                  5
+    For                   5
+    It                    5
+    Not                   5
+    This                  4
+    In                    4
+    Dedicated             4
+    Are                   3
+    Great                 3
+    So                    3
+    Who                   3
+    Is                    3
+    Dead                  3
+    They                  3
+    Us                    3
+    Shall                 3
+    People                3
+    Our                   2
+    On                    2
+    New                   2
+    Conceived             2
+    Men                   2
+    War                   2
+    Or                    2
+    Long                  2
+    Dedicate              2
+    Gave                  2
+    But                   2
+    Living                2
+    Far                   2
+    What                  2
+    Rather                2
+    Be                    2
+    Which                 2
+    From                  2
+    These                 2
+    Devotion              2
+    Four                  1
+    Score                 1
+    Seven                 1
+    Years                 1
+    Ago                   1
+    Fathers               1
+    Brought               1
+    Forth                 1
+    Continent             1
+    Liberty               1
+    Proposition           1
+    All                   1
+    Created               1
+    Equal                 1
+    Now                   1
+    Engaged               1
+    Civil                 1
+    Testing               1
+    Whether               1
+    Any                   1
+    Endure                1
+    Met                   1
+    Battlefield           1
+    Come                  1
+    Portion               1
+    Field                 1
+    As                    1
+    Final                 1
+    Resting               1
+    Place                 1
+    Those                 1
+    Their                 1
+    Lives                 1
+    Might                 1
+    Live                  1
+    Altogether            1
+    Fitting               1
+    Proper                1
+    Should                1
+    Do                    1
+    Larger                1
+    Sense                 1
+    Consecrate            1
+    Hallow                1
+    Ground                1
+    Brave                 1
+    Struggled             1
+    Consecrated           1
+    Above                 1
+    Poor                  1
+    Power                 1
+    Add                   1
+    Detract               1
+    World                 1
+    Will                  1
+    Little                1
+    Note                  1
+    Nor                   1
+    Remember              1
+    Say                   1
+    Never                 1
+    Forget                1
+    Did                   1
+    Unfinished            1
+    Work                  1
+    Fought                1
+    Thus                  1
+    Nobly                 1
+    Advanced              1
+    Task                  1
+    Remaining             1
+    Before                1
+    Honored               1
+    Take                  1
+    Increased             1
+    Cause                 1
+    Last                  1
+    Full                  1
+    Measure               1
+    Highly                1
+    Resolve               1
+    Died                  1
+    Vain                  1
+    Under                 1
+    God                   1
+    Birth                 1
+    Freedom               1
+    Government            1
+    By                    1
+    Perish                1
+    Earth                 1
+    Abraham               1
+    Lincoln               1
+    November              1
+    19                    1
+    1863                  1
