@@ -1,4 +1,24 @@
-# This program fetches chucknorris jokes using request library
+# Purpose of the program: This program fetches chucknorris jokes using request library
+#
+# DSC510 - 9.1
+# Week 9
+# Programming Assignment Week 9
+# Author Pankaj Yadav
+# 08/04/2024
+
+
+# Change Control Log:
+
+# Change #:1
+# Changes Made : 1. Created empty dictionary
+#                2. Created functions main, input_check, check_file_exists, get_jokes & pretty_print
+#                3. Perform API call and print the value to output / fall
+#                4. Call to main function
+# Date of changes : 08/04/2024
+# Author : Pankaj Yadav
+# Change Approved by : Pankaj Yadav
+# Date Moved to Production : 08/04/2024
+
 import os
 import requests
 
